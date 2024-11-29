@@ -174,7 +174,7 @@ html {
 .hotel {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
     background-color: #ceddd8;
 }
 
@@ -187,12 +187,13 @@ html {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 16px;
+    padding: 1rem;
 }
 
 .hotel__description {
     font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem;
+    text-align: start;
 }
 
 .hotel__features {
@@ -251,8 +252,8 @@ html {
 
 .slider {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     transform-style: preserve-3d;
     animation: rotate 30s linear infinite;
 }
@@ -308,9 +309,9 @@ html {
 
 /* Footer Container */
 .footer {
-    padding: 2rem;
-    background-color: #f8f9fa;
-    color: #333;
+    padding: 2;
+    background: linear-gradient(to right, #162623, #849490);
+    color: #ffffff;
     margin: 0;
     box-sizing: border-box;
 }
@@ -319,25 +320,31 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 0;
+    gap: 20;
     position: relative;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-grid__item {
-    padding: 1rem;
+    padding: 2rem;
+    margin: 1rem;
 }
 
 .footer-grid__contact h4,
 .footer-grid__social h4 {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
 .footer-grid__contact a {
-    color: #007bff;
+    color: #e2e4e7;
     text-decoration: none;
+
+}
+
+.footer-grid__contact a:hover {
+    color: #007BFF;
+    text-decoration: underline;
 }
 
 .footer-grid__contact a:hover {
@@ -348,7 +355,7 @@ html {
 .footer-grid__social ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0;
 }
 
@@ -364,7 +371,6 @@ html {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background-color: #cccccc15;
     transform: translateX(-50%);
 }
 
