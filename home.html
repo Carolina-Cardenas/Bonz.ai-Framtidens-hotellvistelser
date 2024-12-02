@@ -13,7 +13,7 @@
         <nav class="header__nav" aria-label="Menú ">
           <!-- Logo del sitio -->
           <figure class="header__logo">
-            <img class="header__logo-img" />
+            <img src="/assets/logo/bonz.ai-logo-white-portrait-full.png" />
           </figure>
 
           <!-- Contenedor del botón del menú -->
@@ -30,8 +30,6 @@
           </section>
         </nav>
       </header>
-
-      <!-- Menú lateral deslizable -->
       <nav
         class="side-menu"
         id="nav"
@@ -40,26 +38,22 @@
       >
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="rooms.html">About Hotel and Facilities</a></li>
-          <!-- <li><a href="services">About Us</a></li>
-          <li><a href="contact">Book/Cancel</a></li> -->
+          <li><a href="hotel.html">About Hotel and Facilities</a></li>
+          <li><a href="services">About Us</a></li>
+          <li><a href="contact">Booking/Cancel</a></li>
         </ul>
       </nav>
-
-      <!-- Fondo oscuro al abrir el menú -->
       <section class="overlay" aria-hidden="true"></section>
     </section>
-
     <!-- Contenido principal -->
-
     <main>
       <section class="home">
         <article class="home__content">
-          <h3 class="home__title">Wellcome</h3>
-          <h1 class="home__hotel">Hotel BONZAI</h1>
+          <h3 class="home__title"></h3>
+          <h1 class="home__hotel">Bonzai hotel</h1>
           <p class="home__text">
-            "Where sustainability and artificial intelligence redefine the hotel
-            experience." Discover Bonzai The Future of Hospitality
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt
+            eveniet recusandae doloribus pariatur nobis nisi quia itaque
           </p>
         </article>
         <a href="#booking" class="home__btn">Boka in</a>
@@ -76,10 +70,9 @@
           const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
           navBtn.setAttribute("aria-expanded", !isExpanded);
           sideMenu.classList.toggle("open");
-          sideMenu.setAttribute("aria-hidden", isExpanded); // Control de accesibilidad
+          sideMenu.setAttribute("aria-hidden", isExpanded);
           overlay.classList.toggle("visible");
         });
-
         overlay.addEventListener("click", () => {
           navBtn.setAttribute("aria-expanded", false);
           sideMenu.classList.remove("open");

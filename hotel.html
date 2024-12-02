@@ -7,8 +7,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Hotel instalaciones -->
-    <section class="hotel">
+  <section>
+    <!-- BOKKING -->
+ <section>
+   <section class="booking-section">
+  <article class="booking-section__dates">
+    <p class="booking-section__label">DATES (1 NIGHT)</p>
+    <article class="booking-section__date-wrapper">
+      <input type="text" class="booking-section__date-input" readonly>
+      <i class="booking-section__icon"></i>
+      <article class="booking-section__calendar">
+        <!-- Calendar -->
+      </article>
+    </article>
+  </article>
+  <article class="booking-section__rooms">
+    <p class="booking-section__label">ROOMS & GUESTS</p>
+    <select class="booking-section__input">
+      <option>1 Room, 1 Adult</option>
+    </select>
+    <i class="booking-section__icon"></i>
+  </article>
+  <article class="booking-section__rates">
+    <p class="booking-section__label">SPECIAL RATES</p>
+    <select class="booking-section__input">
+      <option>Lowest Regular Rate</option>
+    </select>
+    <i class="booking-section__icon"></i>
+    <button class="booking-section__button">View Rates</button>
+  </article>
+</section>
       <header class="hotel__header">
         <h2 class="hotel__title">About the Hotel and its Facilities</h2>
         <p class="hotel__description">
@@ -20,9 +48,7 @@
       </header>
       <section class="Carousel">
         <article class="slider">
-          <span style="--i: 1">
-            <img src="assets/Restaurant.avif" alt=""
-          /></span>
+          <span style="--i: 1"> <img src="assets/Restaurant.avif" alt=""/></span>
           <span style="--i: 2"> <img src="assets/Spa.avif" alt="" /></span>
           <span style="--i: 3"> <img src="assets/garden.avif" alt="" /></span>
           <span style="--i: 4"> <img src="assets/Room.avif" alt="" /></span>
@@ -54,10 +80,71 @@
             </p>
           </article>
         </article>
-        <!-- Foter -->
+        </section>
       </section>
-    </section>
-    <section class="footer">
+      <section class="sustainability__section">
+        <!-- Sustainability -->
+<section class="sustainability">
+  <h1 class="sustainability__title">Sustainability Information</h1>
+  <article class="sustainability__grid">
+    <article class="sustainability__item">
+      <h3 class="sustainability__subtitle">Environmental Practices</h3>
+      <ul class="sustainability__list">
+        <li class="sustainability__list-item">Guest Room Recycling</li>
+        <li class="sustainability__list-item">Electric car charging</li>
+        <li class="sustainability__list-item">The Green Key Certified</li>
+      </ul>
+    </article>
+    <article class="sustainability__item">
+      <h3 class="sustainability__subtitle">Footprints</h3>
+      <p class="sustainability__text">Carbon Footprint: 8.14 kg per room night</p>
+      <p class="sustainability__text">Water Footprint: 153.66 liters per room night</p>
+    </article>
+  </article>
+</section>
+
+
+
+  <section class="amenities">
+    <h2 class="amenities__title">FEATURED AMENITIES ON-SITE</h2>
+    <ul class="amenities__grid">
+            <li class="amenities__item">Sustainability</li>
+            <li class="amenities__item">Free Wifi</li>
+            <li class="amenities__item">Fitness Center</li>
+            <li class="amenities__item">Meeting Space</li>
+            <li class="amenities__item">Gift Shop</li>
+            <li class="amenities__item">Restaurant</li>
+            <li class="amenities__item">Bicycle Rental: kr100.00</li>
+            <li class="amenities__item">Dry Cleaning Service</li>
+            <li class="amenities__item">Additional Info</li>
+        </ul>
+    <h2 class="amenities__title">HOTEL INFORMATION</h2>
+        <ul class="amenities__grid">
+            <li class="amenities__info-item">Check-in: 3:00 pm</li>
+            <li class="amenities__info-item">Check-out: 12:00 pm</li>
+            <li class="amenities__info-item">Smoke Free Property</li>
+            <li class="amenities__info-item">Pet Policy: Pets Welcome</li>
+            <li class="amenities__info-item">Parking: On-Site Parking</li>
+            <li class="amenities__info-item">Long Term Parking</li>
+            <li class="amenities__info-item">Electric Car Charging Station</li>
+            <li class="amenities__info-item">Additional Info</li>
+            <li class="amenities__info-item">Additional Info</li>
+        </ul>
+</section>
+  <!-- Map Section -->
+
+   <section class="map">
+    <h1 class="map__title">Welcome to Our Hotel</h1>
+    <p class="map__description">Below you can see the location of our hotel:</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.084893035393!2d20.22608331531888!3d67.85667566257784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d43695b8a07f65%3A0x467ccd9d31f8b63f!2sCentralvägen%20145%2C%206991%20Kiruna%2C%20Sweden!5e0!3m2!1sen!2sus!4v1668067322339!5m2!1sen!2sus"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</section>
+
+     <!-- Foter --> 
+      <section class="footer">
       <article class="footer-grid">
         <article class="footer-grid__item footer-grid__contact">
           <h4>Contact us</h4>
@@ -72,40 +159,22 @@
            <p> Address:
             <a
               href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank"rel="noopener noreferrer"
               >Centralvägen 145, Kiruna, Sweden
-            </a>
-          </address>
-          </p>
-        </article>
-        <article class="footer-grid__item footer-grid__social">
-          <h4>Follow us</h4>
-          <ul>
-            <li>
-              <a
-                href="https://facebook.com"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/social-media/facebook.svg"
-                  alt="Facebook Icon"
-                />
               </a>
+            </address>
+           </p>
+          </article>
+         <article class="footer-grid__item footer-grid__social">
+          <h4>Follow us</h4>
+           <ul>
+             <li>
+               <a href="https://facebook.com"aria-label="Facebook"target="_blank"rel="noopener noreferrer">
+                <img src="/assets/social-media/facebook.svg" alt="Facebook Icon"/></a>
             </li>
             <li>
-              <a
-                href="https://instagram.com"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/social-media/Instagram_dark.svg"
-                  alt="Instagram Icon"
-                />
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank"rel="noopener noreferrer">
+                <img src="/assets/social-media/Instagram_dark.svg" alt="Instagram Icon"/>
               </a>
             </li>
             <li>
@@ -121,10 +190,10 @@
                 />
               </a>
             </li>
-          </ul>
-        </article>
-      </article>
-      <!-- <article class="footer-bottom"></article> -->
-    </section>
-  </body>
+           </ul>
+         </article>
+       </article>
+     </section>
+   </section>
+ </body>
 </html>
