@@ -6,37 +6,149 @@
     <title>About Bonz.ai Hotel</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-  <section>
+  <body class="hotel-page">
+     <section>
+      <header class="header">
+        <nav class="header__nav" aria-label="Menú ">
+          <!-- Logo del sitio -->
+          <figure class="header__logo">
+            <img src="/assets/logo/bonz.ai-logo-white-portrait-full.png" />
+          </figure>
+
+          <!-- Contenedor del botón del menú -->
+          <section class="container__menu">
+            <button
+              class="menu__btn nav-btn"
+              aria-controls="nav"
+              aria-expanded="false"
+              aria-label="Abrir menú de navegación"
+            >
+              <span class="menu__article"></span>
+              <span class="menu__article"></span>
+            </button>
+          </section>
+        </nav>
+      </header>
+      <nav
+        class="side-menu"
+        id="nav"
+        aria-hidden="true"
+        aria-label="Navegación lateral"
+      >
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="hotel.html">About Hotel and Facilities</a></li>
+          <li><a href="services">About Us</a></li>
+          <li><a href="contact">Booking/Cancel</a></li>
+        </ul>
+      </nav>
+      <section class="overlay" aria-hidden="true"></section>
+    </section>
+   
     <!-- BOKKING -->
- <section>
-   <section class="booking-section">
-  <article class="booking-section__dates">
-    <p class="booking-section__label">DATES (1 NIGHT)</p>
-    <article class="booking-section__date-wrapper">
-      <input type="text" class="booking-section__date-input" readonly>
-      <i class="booking-section__icon"></i>
-      <article class="booking-section__calendar">
-        <!-- Calendar -->
-      </article>
-    </article>
-  </article>
-  <article class="booking-section__rooms">
-    <p class="booking-section__label">ROOMS & GUESTS</p>
-    <select class="booking-section__input">
-      <option>1 Room, 1 Adult</option>
-    </select>
-    <i class="booking-section__icon"></i>
-  </article>
-  <article class="booking-section__rates">
-    <p class="booking-section__label">SPECIAL RATES</p>
-    <select class="booking-section__input">
-      <option>Lowest Regular Rate</option>
-    </select>
-    <i class="booking-section__icon"></i>
-    <button class="booking-section__button">View Rates</button>
-  </article>
-</section>
+<section class="booking-container">
+  <section class="hotel">
+        <article class="section">
+          <h2 class="title">DATES (1 NIGHT)</h2>
+          <article class="date-inputs">
+            <article class="date-input">
+              <label for="check-in" class="label">Check-in</label>
+              <input
+                type="date"
+                id="check-in"
+                class="input input--date"
+                value=""
+              />
+            </article>
+            <article class="date-input">
+              <label for="check-out" class="label">Check-out</label>
+              <input
+                type="date"
+                id="check-out"
+                class="input input--date"
+                value=""
+              />
+            </article>
+          </article>
+        </article>
+
+        <!-- ROOMS & GUESTS Section -->
+        <article class="section">
+          <h2 class="title">ROOMS & GUESTS</h2>
+          <article class="room-options">
+            <!-- Room Counter -->
+            <article class="option">
+              <label for="room-count" class="label">Rooms</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="room-count"
+                  class="input input--counter"
+                  value="1"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </article>
+            <!-- Adults Counter -->
+            <article class="option">
+              <label for="adult-count" class="label">Adults</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="adult-count"
+                  class="input input--counter"
+                  value="1"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </article>
+            <!-- Children Counter -->
+            <darticleiv class="option">
+              <label for="child-count" class="label">Children</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="child-count"
+                  class="input input--counter"
+                  value="0"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </darticleiv>
+          </article>
+        </article>
+
+        <!--  RATES Section -->
+        <article class="section">
+          <h2 class="title">SPECIAL RATES</h2>
+          <article class="rate-options">
+            <article class="rate">
+              <label for="rate-type" class="label">Room Type</label>
+              <select id="rate-type" class="input input--select">
+                <option value="bronze">Bronze</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+                <option value="diamond">Diamond</option>
+              </select>
+            </article>
+            <article class="rate">
+              <label class="label">Lowest Regular Rate</label>
+              <span class="rate-display">$99</span>
+            </article>
+          </article>
+        </article>
+        <article class="actions">
+          <button class="btn btn--view-rates">View Rates</button>
+        </article>
+      </section>
+  </section>
+ <!--  HEADER -->
       <header class="hotel__header">
         <h2 class="hotel__title">About the Hotel and its Facilities</h2>
         <p class="hotel__description">
@@ -46,6 +158,8 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non delectus eveniet velit, nisi at maxime, molestias laboriosam earum voluptatem eaque eligendi, vero officiis beatae ullam. Velit, esse? Sint, voluptas corrupti!
         </p>
       </header>
+   </section>
+   <!-- carousel -->
       <section class="Carousel">
         <article class="slider">
           <span style="--i: 1"> <img src="assets/Restaurant.avif" alt=""/></span>
@@ -58,6 +172,7 @@
           <span style="--i: 8"> <img src="assets/07-day.avif" alt="" /></span>
         </article>
       </section>
+      <!-- features -->
       <section class="hotel__features">
         <article class="grid-container">
           <article class="grid-item">
@@ -80,13 +195,12 @@
             </p>
           </article>
         </article>
-        </section>
-      </section>
-      <section class="sustainability__section">
-        <!-- Sustainability -->
-<section class="sustainability">
-  <h1 class="sustainability__title">Sustainability Information</h1>
-  <article class="sustainability__grid">
+    </section>
+     <!-- Sustainability -->
+ <section class="sustainability__section">   
+  <section class="sustainability">
+   <h1 class="sustainability__title">Sustainability Information</h1>
+    <article class="sustainability__grid">
     <article class="sustainability__item">
       <h3 class="sustainability__subtitle">Environmental Practices</h3>
       <ul class="sustainability__list">
@@ -101,10 +215,9 @@
       <p class="sustainability__text">Water Footprint: 153.66 liters per room night</p>
     </article>
   </article>
-</section>
-
-
-
+ </section>
+ </section>
+   <!-- amenities -->
   <section class="amenities">
     <h2 class="amenities__title">FEATURED AMENITIES ON-SITE</h2>
     <ul class="amenities__grid">
@@ -130,41 +243,28 @@
             <li class="amenities__info-item">Additional Info</li>
             <li class="amenities__info-item">Additional Info</li>
         </ul>
-</section>
+  </section>
   <!-- Map Section -->
 
-   <section class="map">
+     <section class="map">
     <h1 class="map__title">Welcome to Our Hotel</h1>
     <p class="map__description">Below you can see the location of our hotel:</p>
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.084893035393!2d20.22608331531888!3d67.85667566257784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d43695b8a07f65%3A0x467ccd9d31f8b63f!2sCentralvägen%20145%2C%206991%20Kiruna%2C%20Sweden!5e0!3m2!1sen!2sus!4v1668067322339!5m2!1sen!2sus"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
-</section>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757.9900064091095!2d21.709740437785367!3d67.6686608179417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d125436588f1c7%3A0x3f6b0f4582173594!2sCentralv%C3%A4gen%20145%2C%20985%2091%20Vittangi!5e0!3m2!1sen!2sse!4v1733215024294!5m2!1sen!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+   </iframe>
+  </section>
 
      <!-- Foter --> 
-      <section class="footer">
+    <section class="footer">
       <article class="footer-grid">
         <article class="footer-grid__item footer-grid__contact">
-          <h4>Contact us</h4>
-          <address>
-            <p>
-              Email:
-              <a href="mailto:info@bonzaihotel.com">info@bonzaihotel.com</a>
-            </p>
-            <p>
-            <a href="+46 07 234 567 890">Phone: +46 07 234 567 890</a>
-            </p>
-           <p> Address:
-            <a
-              href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden"
-              target="_blank"rel="noopener noreferrer"
-              >Centralvägen 145, Kiruna, Sweden
-              </a>
+            <h4>Contact us</h4>
+            <address>
+                <p>Email: <a href="mailto:info@bonzaihotel.com">info@bonzaihotel.com</a></p>
+                <p><a href="tel:+4607234567890">Phone: +46 07 234 567 890</a></p>
+                <p>Address: <a href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden" target="_blank" rel="noopener noreferrer">Centralvägen 145, Kiruna, Sweden</a></p>
             </address>
-           </p>
-          </article>
+        </article>
          <article class="footer-grid__item footer-grid__social">
           <h4>Follow us</h4>
            <ul>
@@ -179,21 +279,34 @@
             </li>
             <li>
               <a
-                href="https://twitter.com"
-                aria-label="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/social-media/X (formerly Twitter)_dark.svg"
-                  alt="Twitter Icon"
-                />
-              </a>
+                href="https://twitter.com" aria-label="Twitter"target="_blank"rel="noopener noreferrer" >
+                <img src="/assets/social-media/X (formerly Twitter)_dark.svg" alt="Twitter Icon" /> </a>
             </li>
            </ul>
          </article>
        </article>
-     </section>
-   </section>
- </body>
-</html>
+  </section>
+</section>
+
+      <script>
+        const navBtn = document.querySelector(".nav-btn");
+        const sideMenu = document.querySelector(".side-menu");
+        const overlay = document.querySelector(".overlay");
+
+        navBtn.addEventListener("click", () => {
+          const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
+          navBtn.setAttribute("aria-expanded", !isExpanded);
+          sideMenu.classList.toggle("open");
+          sideMenu.setAttribute("aria-hidden", isExpanded);
+          overlay.classList.toggle("visible");
+        });
+        overlay.addEventListener("click", () => {
+          navBtn.setAttribute("aria-expanded", false);
+          sideMenu.classList.remove("open");
+          sideMenu.setAttribute("aria-hidden", true);
+          overlay.classList.remove("visible");
+        });
+      </script>
+    </section>
+   </body>
+ </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="booking-page">
+    <section class="booking-container">
+      <section class="hotel">
+        <article class="section">
+          <h2 class="title">DATES (1 NIGHT)</h2>
+          <article class="date-inputs">
+            <article class="date-input">
+              <label for="check-in" class="label">Check-in</label>
+              <input
+                type="date"
+                id="check-in"
+                class="input input--date"
+                value=""
+              />
+            </article>
+            <article class="date-input">
+              <label for="check-out" class="label">Check-out</label>
+              <input
+                type="date"
+                id="check-out"
+                class="input input--date"
+                value=""
+              />
+            </article>
+          </article>
+        </article>
+
+        <!-- ROOMS & GUESTS Section -->
+        <article class="section">
+          <h2 class="title">ROOMS & GUESTS</h2>
+          <article class="room-options">
+            <!-- Room Counter -->
+            <article class="option">
+              <label for="room-count" class="label">Rooms</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="room-count"
+                  class="input input--counter"
+                  value="1"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </article>
+            <!-- Adults Counter -->
+            <article class="option">
+              <label for="adult-count" class="label">Adults</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="adult-count"
+                  class="input input--counter"
+                  value="1"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </article>
+            <!-- Children Counter -->
+            <darticleiv class="option">
+              <label for="child-count" class="label">Children</label>
+              <article class="counter">
+                <button class="btn btn--decrement">-</button>
+                <input
+                  type="text"
+                  id="child-count"
+                  class="input input--counter"
+                  value="0"
+                  readonly
+                />
+                <button class="btn btn--increment">+</button>
+              </article>
+            </darticleiv>
+          </article>
+        </article>
+
+        <!-- SPECIAL RATES Section -->
+        <article class="section">
+          <h2 class="title">SPECIAL RATES</h2>
+          <article class="rate-options">
+            <article class="rate">
+              <label for="rate-type" class="label">Room Type</label>
+              <select id="rate-type" class="input input--select">
+                <option value="bronze">Bronze</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+                <option value="diamond">Diamond</option>
+              </select>
+            </article>
+            <article class="rate">
+              <label class="label">**Lowest Regular Rate**</label>
+              <span class="rate-display">$99</span>
+            </article>
+          </article>
+        </article>
+
+        <!-- Actions Section -->
+        <article class="actions">
+          <button class="btn btn--view-rates">View Rates</button>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>
