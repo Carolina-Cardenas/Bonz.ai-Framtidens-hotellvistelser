@@ -12,6 +12,14 @@
      color: #333;
  }
 
+ body.home-page {
+     background-image: url('./assets/08-night.avif');
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
  body.hotel-page {
      background-image: url('./assets/Hotel.avif');
      background-size: cover;
@@ -21,16 +29,8 @@
 
  }
 
- body.home-page {
-     background-image: url('./assets/08-night.avif');
-     background-size: cover;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
- }
-
  body.booking-page {
-     background-image: url('./assets/08-night.avif');
+     background-image: url('./assets/hotel.avif');
      background-size: cover;
      background-attachment: fixed;
      background-position: center;
@@ -170,27 +170,19 @@
 
  .home__content {
      display: flex;
-     flex-direction: column;
-     justify-content: center;
      align-items: start;
      height: 100%;
-     text-align: start;
- }
-
- .home__title,
- .home__text {
-     color: white;
-     padding-left: 40px;
-     font-family: 'Poppins', sans-serif;
-
+     margin-top: 15rem;
+     padding-inline-start: 5rem;
  }
 
  .home__hotel {
-     font-size: 2rem;
+     font-size: 3rem;
      color: white;
-     padding-left: 40px;
+     padding-left: 3rem;
      font-family: 'Poppins', sans-serif;
-     line-height: 1.6
+     justify-content: center;
+     text-align: center;
  }
 
  .home__btn {
@@ -215,14 +207,14 @@
  }
 
  /* BOOKING */
- .hotel {
+ /* .hotel {
      height: 100%;
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
      margin: 0 auto;
      padding: 0;
- }
+ } */
 
  .booking-container {
      margin: 0 auto;
@@ -240,13 +232,13 @@
 
  .hotel-booking {
      padding: 20px;
-     background-color: rgba(255, 255, 255, 0.142);
+     background-color: rgba(255, 255, 255, 0);
      border-radius: 10px;
      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
  }
 
  .hotel {
-     background-color: rgba(249, 247, 247, 0.243);
+     background-color: rgba(32, 30, 30, 0.243);
      padding: 2.5rem;
      border-radius: 1rem;
      display: flex;
@@ -289,12 +281,6 @@
      border-radius: 4px;
      font-size: 18px;
  }
-
- /* 
- .input--date {
-     background-color: #f4f4f4;
-     cursor: pointer;
- } */
 
  .room-options {
      display: flex;
@@ -349,7 +335,6 @@
      align-items: center;
      gap: 1rem;
      align-items: baseline;
-     /* justify-content: space-between; */
  }
 
  .rate-display {
@@ -372,9 +357,138 @@
      grid-column: 1 / -1;
  }
 
+ /* HOTEL IMAGES */
+ .image-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+ }
+
+ .grid-item {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .grid-item img {
+     width: 100%;
+     object-fit: cover;
+     border-radius: 8px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .grid-item:hover img {
+     transform: scale(1.1);
+     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .image-label {
+     position: absolute;
+     top: 2rem;
+     left: 50%;
+     transform: translateX(-50%);
+     color: white;
+     font-weight: bold;
+     font-size: 1.2em;
+     background-color: rgba(0, 0, 0, 0.6);
+     padding: 5px 10px;
+     border-radius: 5px;
+ }
+
+
+ /* Contact Form Styles */
+ .contact-form {
+     max-width: 1100px;
+     width: 100%;
+     margin: 8rem auto;
+     padding: 3rem;
+     border-radius: 10px;
+     background-color: rgb(247, 247, 247);
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.4);
+ }
+
+
+ .contact-form .title {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #333;
+     margin-bottom: 10px;
+ }
+
+ .contact-form .contact-details,
+ .contact-form .special-requests {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .contact-form .contact-input {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .contact-form .label {
+     font-size: 1rem;
+     color: #666;
+     margin-bottom: 5px;
+ }
+
+ .contact-form .input {
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 1rem;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ .contact-form .input:focus {
+     outline: none;
+     border-color: #f6aa1c;
+     box-shadow: 0 0 4px rgba(246, 170, 28, 0.5);
+ }
+
+ .contact-form .input--textarea {
+     resize: none;
+ }
+
+ .contact-form .actions {
+     text-align: center;
+ }
+
+ .contact-form .input::placeholder {
+     color: #aaa;
+     font-style: italic;
+     font-size: 0.9rem;
+ }
+
+ .contact-form .input:focus::placeholder {
+     color: transparent;
+ }
+
+ .contact-form .btn {
+     background-color: #f6aa1c;
+     color: #252222;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .contact-form .btn--submit:hover {
+     background-color: #e59700;
+ }
+
  /* About/ hotel  */
-
-
  .hotel__header {
      text-align: center;
      margin-bottom: 40px;
@@ -614,9 +728,10 @@
      display: none;
  }
 
+
  /*Map*/
  .map {
-     max-width: 1200px;
+     max-width: 1100px;
      margin: 0 auto;
      text-align: center;
      padding: 2rem;
@@ -716,4 +831,23 @@
      left: 50%;
      width: 1px;
      transform: translateX(-50%);
+ }
+
+ /* Responsive Design for Contact Form */
+ @media (max-width: 768px) {
+     .contact-form {
+         padding: 15px;
+     }
+
+     .contact-form .title {
+         font-size: 1.25rem;
+     }
+
+     .contact-form .input {
+         font-size: 0.9rem;
+     }
+
+     .contact-form .btn {
+         font-size: 0.9rem;
+     }
  }

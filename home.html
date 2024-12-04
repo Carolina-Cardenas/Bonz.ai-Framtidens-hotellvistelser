@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="home-page">
-    <!-- Encabezado principal -->
     <section>
       <header class="header">
         <nav class="header__nav" aria-label="Menú ">
@@ -38,28 +37,86 @@
       >
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="hotel.html">About Hotel and Facilities</a></li>
-          <li><a href="services">About Us</a></li>
-          <li><a href="contact">Booking/Cancel</a></li>
+          <li><a href="hotel.html">Our Hotel</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
         </ul>
       </nav>
       <section class="overlay" aria-hidden="true"></section>
     </section>
-    <!-- Contenido principal -->
     <main>
       <section class="home">
         <article class="home__content">
-          <h3 class="home__title"></h3>
-          <h1 class="home__hotel">Bonzai hotel</h1>
-          <p class="home__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt
-            eveniet recusandae doloribus pariatur nobis nisi quia itaque
-          </p>
+          <h1 class="home__hotel">Welcome Bonzai hotel</h1>
         </article>
-        <a href="#booking" class="home__btn">Boka in</a>
+        <a href="#booking" class="home__btn">Booking Now</a>
       </section>
     </main>
-
+    <section class="footer">
+      <article class="footer-grid">
+        <article class="footer-grid__item footer-grid__contact">
+          <h4>Contact us</h4>
+          <address>
+            <p>
+              Email:
+              <a href="mailto:info@bonzaihotel.com">info@bonzaihotel.com</a>
+            </p>
+            <p><a href="tel:+4607234567890">Phone: +46 07 234 567 890</a></p>
+            <p>
+              Address:
+              <a
+                href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Centralvägen 145, Kiruna, Sweden</a
+              >
+            </p>
+          </address>
+        </article>
+        <article class="footer-grid__item footer-grid__social">
+          <h4>Follow us</h4>
+          <ul>
+            <li>
+              <a
+                href="https://facebook.com"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/facebook.svg"
+                  alt="Facebook Icon"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/Instagram_dark.svg"
+                  alt="Instagram Icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/X (formerly Twitter)_dark.svg"
+                  alt="Twitter Icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </article>
+      </article>
+    </section>
     <section>
       <script>
         const navBtn = document.querySelector(".nav-btn");

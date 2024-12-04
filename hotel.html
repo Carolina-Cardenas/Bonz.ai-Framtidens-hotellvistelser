@@ -35,11 +35,10 @@
         aria-hidden="true"
         aria-label="Navegación lateral"
       >
-        <ul>
+         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="hotel.html">About Hotel and Facilities</a></li>
-          <li><a href="services">About Us</a></li>
-          <li><a href="contact">Booking/Cancel</a></li>
+          <li><a href="hotel.html">Our Hotel</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
         </ul>
       </nav>
       <section class="overlay" aria-hidden="true"></section>
@@ -244,50 +243,81 @@
             <li class="amenities__info-item">Additional Info</li>
         </ul>
   </section>
-  <!-- Map Section -->
-
-     <section class="map">
+  <section class="map">
     <h1 class="map__title">Welcome to Our Hotel</h1>
     <p class="map__description">Below you can see the location of our hotel:</p>
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757.9900064091095!2d21.709740437785367!3d67.6686608179417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d125436588f1c7%3A0x3f6b0f4582173594!2sCentralv%C3%A4gen%20145%2C%20985%2091%20Vittangi!5e0!3m2!1sen!2sse!4v1733215024294!5m2!1sen!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+          width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=21.639440059661865%2C67.67465819568176%2C21.657464504241947%2C67.68055879842368&amp;layer=mapnik" style="border: 1px solid black"></><br/><small><a href="https://www.openstreetmap.org/#map=16/67.67761/21.64845">Visa större karta</a></small>
    </iframe>
   </section>
-
-     <!-- Foter --> 
-    <section class="footer">
+ <section class="footer">
       <article class="footer-grid">
         <article class="footer-grid__item footer-grid__contact">
-            <h4>Contact us</h4>
-            <address>
-                <p>Email: <a href="mailto:info@bonzaihotel.com">info@bonzaihotel.com</a></p>
-                <p><a href="tel:+4607234567890">Phone: +46 07 234 567 890</a></p>
-                <p>Address: <a href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden" target="_blank" rel="noopener noreferrer">Centralvägen 145, Kiruna, Sweden</a></p>
-            </address>
+          <h4>Contact us</h4>
+          <address>
+            <p>
+              Email:
+              <a href="mailto:info@bonzaihotel.com">info@bonzaihotel.com</a>
+            </p>
+            <p><a href="tel:+4607234567890">Phone: +46 07 234 567 890</a></p>
+            <p>
+              Address:
+              <a
+                href="https://www.google.com/maps/place/Centralvägen+145,+Kiruna,+Sweden"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Centralvägen 145, Kiruna, Sweden</a
+              >
+            </p>
+          </address>
         </article>
-         <article class="footer-grid__item footer-grid__social">
+        <article class="footer-grid__item footer-grid__social">
           <h4>Follow us</h4>
-           <ul>
-             <li>
-               <a href="https://facebook.com"aria-label="Facebook"target="_blank"rel="noopener noreferrer">
-                <img src="/assets/social-media/facebook.svg" alt="Facebook Icon"/></a>
+          <ul>
+            <li>
+              <a
+                href="https://facebook.com"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/facebook.svg"
+                  alt="Facebook Icon"
+              /></a>
             </li>
             <li>
-              <a href="https://instagram.com" aria-label="Instagram" target="_blank"rel="noopener noreferrer">
-                <img src="/assets/social-media/Instagram_dark.svg" alt="Instagram Icon"/>
+              <a
+                href="https://instagram.com"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/Instagram_dark.svg"
+                  alt="Instagram Icon"
+                />
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com" aria-label="Twitter"target="_blank"rel="noopener noreferrer" >
-                <img src="/assets/social-media/X (formerly Twitter)_dark.svg" alt="Twitter Icon" /> </a>
+                href="https://twitter.com"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/social-media/X (formerly Twitter)_dark.svg"
+                  alt="Twitter Icon"
+                />
+              </a>
             </li>
-           </ul>
-         </article>
-       </article>
-  </section>
-</section>
+          </ul>
+        </article>
+      </article>
+    </section>
 
+<section>
       <script>
         const navBtn = document.querySelector(".nav-btn");
         const sideMenu = document.querySelector(".side-menu");
@@ -307,6 +337,6 @@
           overlay.classList.remove("visible");
         });
       </script>
-    </section>
+      </section>
    </body>
  </html>
