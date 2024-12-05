@@ -6,63 +6,67 @@
     <title>booking</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-   <section>
-      <header class="header">
-        <nav class="header__nav" aria-label="Menú ">
-          <!-- LOGO -->
-          <figure class="header__logo">
-            <img src="/assets/logo/bonz.ai-logo-white-portrait-full.png" />
-          </figure>
-
-          <!-- BTN-menú -->
-          <section class="container__menu">
-            <button
-              class="menu__btn nav-btn"
-              aria-controls="nav"
-              aria-expanded="false"
-              aria-label="Abrir menú de navegación"
-            >
-              <span class="menu__article"></span>
-              <span class="menu__article"></span>
-            </button>
-          </section>
-        </nav>
-      </header>
-      <nav
-        class="side-menu"
-        id="nav"
-        aria-hidden="true"
-        aria-label="Navegación lateral"
-      >
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="hotel.html">Our Hotel</a></li>
-          <li><a href="reservation.html">Reservation</a></li>
-        </ul>
-      </nav>
-      <section class="overlay" aria-hidden="true"></section>
-    </section>
-      <!-- IMAGES -->
- <section class="image-grid">
-    <article class="grid-item">
-        <span class="image-label">Bronze</span>
-        <img src="./assets/bronze.avif" alt="Bronze">
-    </article>
-    <article class="grid-item">
-        <span class="image-label">Gold</span>
-        <img src="./assets/gold.avif" alt="Gold">
-    </article>
-    <article class="grid-item">
-        <span class="image-label">Platinum</span>
-        <img src="./assets/platinum.avif" alt="Platinum">
-    </article>
-    <article class="grid-item">
-        <span class="image-label">Diamond</span>
-        <img src="./assets/diamond.avif" alt="Diamond">
-    </article>
-</section>
-    <!-- BOOKING -->
   <body class="booking-page">
+    <header class="header">
+      <nav class="header__nav" aria-label="Menú ">
+        <!-- LOGO -->
+        <a href="/home.html" class="header__logo-link">
+          <figure class="header__logo">
+            <img
+              src="/assets/logo/bonz.ai-logo-white-portrait-full.png"
+              alt="Bonz.ai Logo"
+            />
+          </figure>
+        </a>
+
+        <!-- BTN-menú -->
+        <section class="container__menu">
+          <button
+            class="menu__btn nav-btn"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="menu__article"></span>
+            <span class="menu__article"></span>
+          </button>
+        </section>
+      </nav>
+    </header>
+    <nav
+      class="side-menu"
+      id="nav"
+      aria-hidden="true"
+      aria-label="Navegación lateral"
+    >
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotel.html">Our Hotel</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </nav>
+    <section class="overlay" aria-hidden="true"></section>
+    <!-- IMAGES -->
+    <section class="image-grid">
+      <article class="grid-item">
+        <span class="image-label">Bronze</span>
+        <img src="./assets/bronze.avif" alt="Bronze" />
+      </article>
+      <article class="grid-item">
+        <span class="image-label">Gold</span>
+        <img src="./assets/gold.avif" alt="Gold" />
+      </article>
+      <article class="grid-item">
+        <span class="image-label">Platinum</span>
+        <img src="./assets/platinum.avif" alt="Platinum" />
+      </article>
+      <article class="grid-item">
+        <span class="image-label">Diamond</span>
+        <img src="./assets/diamond.avif" alt="Diamond" />
+      </article>
+    </section>
+    <!-- BOOKING -->
+
     <section class="booking-container">
       <section class="hotel">
         <article class="section">
@@ -221,16 +225,28 @@
         </button>
       </section>
     </form>
-     <!-- Map Section -->
+    <!-- Map Section -->
 
-     <section class="map">
-    <h1 class="map__title">Welcome to Our Hotel</h1>
-    <p class="map__description">Below you can see the location of our hotel:</p>
-    <iframe
-          width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=21.639440059661865%2C67.67465819568176%2C21.657464504241947%2C67.68055879842368&amp;layer=mapnik" style="border: 1px solid black"></><br/><small><a href="https://www.openstreetmap.org/#map=16/67.67761/21.64845">Visa större karta</a></small>
-   </iframe>
-  </section>
+    <section class="map">
+      <h2 class="map__title">Welcome to Our Hotel</h2>
+      <p class="map__description">
+        Below you can see the location of our hotel:
+      </p>
 
+      <iframe
+        width="425"
+        height="350"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=21.639440059661865%2C67.67465819568176%2C21.657464504241947%2C67.68055879842368&amp;layer=mapnik"
+        style="border: 1px solid black"
+      >
+      </iframe>
+      <br />
+      <small
+        ><a href="https://www.openstreetmap.org/#map=16/67.67761/21.64845"
+          >Visa större karta</a
+        ></small
+      >
+    </section>
     <section class="footer">
       <article class="footer-grid">
         <article class="footer-grid__item footer-grid__contact">
@@ -288,7 +304,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/assets/social-media/X (formerly Twitter)_dark.svg"
+                  src="/assets/social-media/X%20(formerly%20Twitter)_dark.svg"
                   alt="Twitter Icon"
                 />
               </a>
@@ -297,26 +313,24 @@
         </article>
       </article>
     </section>
-<section>
- <script>
-        const navBtn = document.querySelector(".nav-btn");
-        const sideMenu = document.querySelector(".side-menu");
-        const overlay = document.querySelector(".overlay");
+    <script>
+      const navBtn = document.querySelector(".nav-btn");
+      const sideMenu = document.querySelector(".side-menu");
+      const overlay = document.querySelector(".overlay");
 
-        navBtn.addEventListener("click", () => {
-          const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
-          navBtn.setAttribute("aria-expanded", !isExpanded);
-          sideMenu.classList.toggle("open");
-          sideMenu.setAttribute("aria-hidden", isExpanded);
-          overlay.classList.toggle("visible");
-        });
-        overlay.addEventListener("click", () => {
-          navBtn.setAttribute("aria-expanded", false);
-          sideMenu.classList.remove("open");
-          sideMenu.setAttribute("aria-hidden", true);
-          overlay.classList.remove("visible");
-        });
-      </script>
-</section>
+      navBtn.addEventListener("click", () => {
+        const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
+        navBtn.setAttribute("aria-expanded", !isExpanded);
+        sideMenu.classList.toggle("open");
+        sideMenu.setAttribute("aria-hidden", isExpanded);
+        overlay.classList.toggle("visible");
+      });
+      overlay.addEventListener("click", () => {
+        navBtn.setAttribute("aria-expanded", false);
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute("aria-hidden", true);
+        overlay.classList.remove("visible");
+      });
+    </script>
   </body>
 </html>
