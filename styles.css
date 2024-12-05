@@ -271,6 +271,7 @@
 
  .date-inputs {
      display: flex;
+     flex-direction: column;
      gap: 1rem;
  }
 
@@ -294,9 +295,9 @@
 
  .room-options {
      display: flex;
-     flex-direction: row;
+     flex-direction: column;
      justify-content: space-around;
-     gap: 16rem;
+     gap: 1rem;
      padding: 10px;
  }
 
@@ -316,6 +317,9 @@
 
  .counter .btn,
  .input--counter {
+     display: flex;
+     align-items: center;
+     justify-content: center;
      background-color: #fff;
      width: 50px;
      height: 50px;
@@ -325,6 +329,8 @@
      border-radius: 100%;
      transition: background-color 0.3s ease;
  }
+
+
 
  .counter .btn:hover {
      background-color: #52794e;
@@ -361,10 +367,6 @@
      border-radius: 4px;
      cursor: pointer;
      align-self: center;
- }
-
- .btn--view-rates {
-     grid-column: 1 / -1;
  }
 
  /* HOTEL IMAGES */
@@ -907,6 +909,35 @@
      .spinner span img:hover {
          transform: translateY(-30px) scale(1.1);
      }
+
+     .counter {
+         gap: 5px;
+     }
+
+     .counter .btn {
+         width: 20px;
+         height: 20px;
+         font-size: 14px;
+     }
+
+     .counter .input--counter {
+         width: 20px;
+         height: 20px;
+         font-size: 14px;
+         line-height: 20px;
+     }
+
+     .image-label {
+         display: none;
+     }
+
+     .grid-item img {
+         width: 150%;
+         object-fit: cover;
+         border-radius: 8px;
+         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
  }
 
  @media (min-width: 1000px) {
@@ -941,5 +972,17 @@
          width: 1px;
          background-color: #162623;
          transform: translateX(-90%);
+     }
+
+     .room-options {
+
+         flex-direction: row;
+         justify-content: space-between;
+         padding: 10px;
+     }
+
+     .date-inputs {
+         flex-direction: row;
+
      }
  }
