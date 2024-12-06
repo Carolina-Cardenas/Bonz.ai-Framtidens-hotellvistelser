@@ -3,49 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bonz.ai - Hotel</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>Bonz.ai - Hotel</title>
   </head>
   <body class="home-page">
-    <section>
-      <header class="header">
-        <nav class="header__nav" aria-label="Menú ">
-          <a href="/home.html" class="header__logo-link">
-            <figure class="header__logo">
-              <img
-                src="/assets/logo/bonz.ai-logo-white-portrait-full.png"
-                alt="Bonz.ai Logo"
-              />
-            </figure>
-          </a>
-          <!-- Contenedor del botón del menú -->
-          <section class="container__menu">
-            <button
-              class="menu__btn nav-btn"
-              aria-controls="nav"
-              aria-expanded="false"
-              aria-label="Abrir menú de navegación"
-            >
-              <span class="menu__article"></span>
-              <span class="menu__article"></span>
-            </button>
-          </section>
-        </nav>
-      </header>
-      <nav
-        class="side-menu"
-        id="nav"
-        aria-hidden="true"
-        aria-label="Navegación lateral"
-      >
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="hotel.html">Our Hotel</a></li>
-          <li><a href="reservation.html">Reservation</a></li>
-        </ul>
+    <header class="header">
+      <nav class="header__nav" aria-label="Menú ">
+        <a href="/home.html" class="header__logo-link">
+          <figure class="header__logo">
+            <img
+              src="/assets/logo/bonz.ai-logo-white-portrait-full.png"
+              alt="Bonz.ai Logo"
+            />
+          </figure>
+        </a>
+        <!-- Contenedor del botón del menú -->
+        <div class="container__menu">
+          <button
+            class="menu__btn nav-btn"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="menu__article"></span>
+            <span class="menu__article"></span>
+          </button>
+        </div>
       </nav>
-      <section class="overlay" aria-hidden="true"></section>
-    </section>
+    </header>
+
+    <nav
+      class="side-menu"
+      id="nav"
+      aria-hidden="true"
+      aria-label="Navegación lateral"
+    >
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotel.html">Our Hotel</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay" aria-hidden="true"></div>
+
     <main>
       <section class="home">
         <article class="home__content">
@@ -54,7 +55,8 @@
         <a href="booking.html" class="home__btn">Book Now</a>
       </section>
     </main>
-    <section class="footer">
+
+    <footer class="footer">
       <article class="footer-grid">
         <article class="footer-grid__item footer-grid__contact">
           <h4>Contact us</h4>
@@ -84,8 +86,7 @@
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+                ><img
                   src="/assets/social-media/facebook.svg"
                   alt="Facebook Icon"
               /></a>
@@ -96,12 +97,10 @@
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+                ><img
                   src="/assets/social-media/Instagram_dark.svg"
                   alt="Instagram Icon"
-                />
-              </a>
+              /></a>
             </li>
             <li>
               <a
@@ -109,37 +108,35 @@
                 aria-label="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+                ><img
                   src="/assets/social-media/X%20(formerly%20Twitter)_dark.svg"
                   alt="Twitter Icon"
-                />
-              </a>
+              /></a>
             </li>
           </ul>
         </article>
       </article>
-    </section>
-    <section>
-      <script>
-        const navBtn = document.querySelector(".nav-btn");
-        const sideMenu = document.querySelector(".side-menu");
-        const overlay = document.querySelector(".overlay");
+    </footer>
 
-        navBtn.addEventListener("click", () => {
-          const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
-          navBtn.setAttribute("aria-expanded", !isExpanded);
-          sideMenu.classList.toggle("open");
-          sideMenu.setAttribute("aria-hidden", isExpanded);
-          overlay.classList.toggle("visible");
-        });
-        overlay.addEventListener("click", () => {
-          navBtn.setAttribute("aria-expanded", false);
-          sideMenu.classList.remove("open");
-          sideMenu.setAttribute("aria-hidden", true);
-          overlay.classList.remove("visible");
-        });
-      </script>
-    </section>
+    <script>
+      const navBtn = document.querySelector(".nav-btn");
+      const sideMenu = document.querySelector(".side-menu");
+      const overlay = document.querySelector(".overlay");
+
+      navBtn.addEventListener("click", () => {
+        const isExpanded = navBtn.getAttribute("aria-expanded") === "true";
+        navBtn.setAttribute("aria-expanded", !isExpanded);
+        sideMenu.classList.toggle("open");
+        sideMenu.setAttribute("aria-hidden", isExpanded);
+        overlay.classList.toggle("visible");
+      });
+
+      overlay.addEventListener("click", () => {
+        navBtn.setAttribute("aria-expanded", false);
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute("aria-hidden", true);
+        overlay.classList.remove("visible");
+      });
+    </script>
   </body>
 </html>
