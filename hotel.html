@@ -39,8 +39,8 @@
               aria-expanded="false"
               aria-label="Abrir menú de navegación"
             >
-              <span class="menu__article"></span>
-              <span class="menu__article"></span>
+              <span class="menu__article" aria-hidden="true"></span>
+              <span class="menu__article" aria-hidden="true"></span>
             </button>
           </section>
         </nav>
@@ -52,9 +52,9 @@
         aria-label="Navegación lateral"
       >
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="hotel.html">Our Hotel</a></li>
-          <li><a href="reservation.html">Reservation</a></li>
+          <li><a aria-hidden="true" href="home.html">Home</a></li>
+          <li><a aria-hidden="true" href="hotel.html">Our Hotel</a></li>
+          <li><a aria-hidden="true" href="reservation.html">Reservation</a></li>
         </ul>
       </nav>
       <section class="overlay" aria-hidden="true"></section>
@@ -81,14 +81,30 @@
     <!-- carousel -->
     <section class="Carousel">
       <article class="slider">
-        <span style="--i: 1"> <img src="assets/Restaurant.avif" alt="" /></span>
-        <span style="--i: 2"> <img src="assets/Spa.avif" alt="" /></span>
-        <span style="--i: 3"> <img src="assets/garden.avif" alt="" /></span>
-        <span style="--i: 4"> <img src="assets/Room.avif" alt="" /></span>
-        <span style="--i: 5"> <img src="assets/09-day.avif" alt="" /></span>
-        <span style="--i: 6"> <img src="assets/Pool.avif" alt="" /></span>
-        <span style="--i: 7"> <img src="assets/03-day.avif" alt="" /></span>
-        <span style="--i: 8"> <img src="assets/07-day.avif" alt="" /></span>
+        <span style="--i: 1" aria-hidden="true">
+          <img src="assets/Restaurant.avif" alt=""
+        /></span>
+        <span style="--i: 2" aria-hidden="true">
+          <img src="assets/Spa.avif" alt=""
+        /></span>
+        <span style="--i: 3" aria-hidden="true">
+          <img src="assets/garden.avif" alt=""
+        /></span>
+        <span style="--i: 4" aria-hidden="true">
+          <img src="assets/Room.avif" alt=""
+        /></span>
+        <span style="--i: 5" aria-hidden="true">
+          <img src="assets/09-day.avif" alt=""
+        /></span>
+        <span style="--i: 6" aria-hidden="true">
+          <img src="assets/Pool.avif" alt=""
+        /></span>
+        <span style="--i: 7" aria-hidden="true">
+          <img src="assets/03-day.avif" alt=""
+        /></span>
+        <span style="--i: 8" aria-hidden="true">
+          <img src="assets/07-day.avif" alt=""
+        /></span>
       </article>
     </section>
     <!-- features -->
@@ -121,7 +137,9 @@
         <h1 class="sustainability__title">Sustainability Information</h1>
         <article class="sustainability__grid">
           <article class="sustainability__item">
-            <h3 class="sustainability__subtitle">Environmental Practices</h3>
+            <h3 class="sustainability__title__subtitle">
+              Environmental Practices
+            </h3>
             <ul class="sustainability__list">
               <li class="sustainability__list-item">Guest Room Recycling</li>
               <li class="sustainability__list-item">Electric car charging</li>
@@ -173,6 +191,7 @@
         Below you can see the location of our hotel:
       </p>
       <iframe
+        title="map"
         width="425"
         height="350"
         src="https://www.openstreetmap.org/export/embed.html?bbox=21.639440059661865%2C67.67465819568176%2C21.657464504241947%2C67.68055879842368&amp;layer=mapnik"

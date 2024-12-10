@@ -21,7 +21,7 @@
     <header class="header">
       <!-- LOGO -->
       <nav class="header__nav" aria-label="menu">
-        <a href="/home.html" class="header__logo-link">
+        <a aria-hidden="true" href="/home.html" class="header__logo-link">
           <figure class="header__logo">
             <img
               src="/assets/logo/bonz.ai-logo-white-portrait-full.png"
@@ -51,9 +51,9 @@
       aria-label="Navegación lateral"
     >
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="hotel.html">Our Hotel</a></li>
-        <li><a href="reservation.html">Reservation</a></li>
+        <li><a aria-hidden="true" href="home.html">Home</a></li>
+        <li><a aria-hidden="true" href="hotel.html">Our Hotel</a></li>
+        <li><a aria-hidden="true" href="reservation.html">Reservation</a></li>
       </ul>
     </nav>
     <section class="overlay" aria-hidden="true"></section>
@@ -242,6 +242,7 @@
       </p>
 
       <iframe
+        title="map"
         width="425"
         height="350"
         src="https://www.openstreetmap.org/export/embed.html?bbox=21.639440059661865%2C67.67465819568176%2C21.657464504241947%2C67.68055879842368&amp;layer=mapnik"
